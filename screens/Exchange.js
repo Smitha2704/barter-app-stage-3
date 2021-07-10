@@ -15,41 +15,7 @@ export default class Exchange extends Component{
     }
   }
 
-  addItem=(itemName, description)=>{
-    var userName = this.state.userName
-    db.collection("exchange_requests").add({
-      "username"    : userName,
-      "item_name"   : itemName,
-      "description" : description
-     })
-     this.setState({
-       itemName : '',
-       description :''
-     })
-
-     this.setState({
-       itemName : '',
-       description :''
-     })
-
-     // NOTE: Comment below return statement when you test the app in ios
-     // ToastAndroid.showWithGravityAndOffset('Item ready to exchange',
-     //    ToastAndroid.SHORT,
-     //  );
-     // return this.props.navigation.navigate('HomeScreen')
-
-     // NOTE:  Comment the below return statement when you test the app in android
-     return Alert.alert(
-          'Item ready to exchange',
-          '',
-          [
-            {text: 'OK', onPress: () => {
-
-              this.props.navigation.navigate('HomeScreen')
-            }}
-          ]
-      );
-  }
+ //Add the add Item function
 
 
 
